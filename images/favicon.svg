@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <!-- Rounded container with brand gradient -->
+  <rect width="512" height="512" rx="140" fill="url(#bg-grad)" />
+  <!-- A subtle inner glow or accent to make it look 3D and premium -->
+  <rect x="12" y="12" width="488" height="488" rx="128" fill="none" stroke="#ffffff" stroke-width="6" stroke-opacity="0.15" />
+  <!-- Styled Letter S with shadow -->
+  <text x="50%" y="54%" 
+        dominant-baseline="middle" 
+        text-anchor="middle" 
+        font-family="'Inter', system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="300" 
+        fill="#ffffff" 
+        filter="url(#subtle-shadow)">S</text>
+</svg>
