@@ -57,6 +57,50 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+// ===== Lead capture form (auditoria gratuita) =====
+const leadForm = document.getElementById('lead-form');
+if (leadForm) {
+  const feedback = document.getElementById('lead-feedback');
+  const submitBtn = document.getElementById('lead-submit');
+
+  const showFeedback = (msg, ok) => {
+    feedback.textContent = msg;
+    feedback.classList.remove('hidden', 'ok', 'err');
+    feedback.classList.add(ok ? 'ok' : 'err');
+  };
+
+  leadForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Fill in https:// if the user didn't type it
+    const siteInput = document.getElementById('lead-site');
+    if (siteInput && siteInput.value.trim() && !/^https?:\/\//i.test(siteInput.value.trim())) {
+      siteInput.value = 'https://' + siteInput.value.trim();
+    }
+
+    if (!leadForm.reportValidity()) return;
+
+    submitBtn.disabled = true;
+    feedback.classList.add('hidden');
+
+    try {
+      const res = await fetch(leadForm.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(leadForm),
+      });
+      if (!res.ok) throw new Error();
+      leadForm.reset();
+      showFeedback('Recebido! Sua auditoria chega no seu e-mail em até 48h úteis. 🎉', true);
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'auditoria_gratuita' });
+    } catch {
+      showFeedback('Não foi possível enviar agora. Tente novamente ou chame a gente no WhatsApp.', false);
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
 // ===== Collapse nav under 860px (design hides links; log for extensibility) =====
 const mq = window.matchMedia('(max-width: 860px)');
 function handleNav(e) {

@@ -17,6 +17,23 @@
   <meta name="description"
     content="Crie grátis um botão flutuante de WhatsApp, Instagram, telefone ou link para o seu site. Personalize cor, ícone e posição e copie o código pronto — sem plugin." />
 
+  <link rel="canonical" href="https://suportelojaonline.com.br/gerador-botao-flutuante.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SLO — Suporte Loja Online" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://suportelojaonline.com.br/gerador-botao-flutuante.html" />
+  <meta property="og:title" content="Gerador de Botão Flutuante de WhatsApp e Multi-canal para Site — SLO" />
+  <meta property="og:description"
+    content="Crie grátis um botão flutuante de WhatsApp, Instagram, telefone ou link para o seu site. Personalize cor, ícone e posição e copie o código pronto — sem plugin." />
+  <meta property="og:image" content="https://suportelojaonline.com.br/images/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gerador de Botão Flutuante de WhatsApp e Multi-canal para Site — SLO" />
+  <meta name="twitter:description"
+    content="Crie grátis um botão flutuante de WhatsApp, Instagram, telefone ou link para o seu site. Personalize cor, ícone e posição e copie o código pronto — sem plugin." />
+  <meta name="twitter:image" content="https://suportelojaonline.com.br/images/og-cover.png" />
+
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
@@ -25,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
   <link rel="stylesheet" href="styles.css?v=20260719" />
 
   <style>
@@ -419,6 +436,46 @@
       display: none !important;
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://suportelojaonline.com.br/#org",
+      "name": "SLO — Suporte Loja Online",
+      "url": "https://suportelojaonline.com.br/",
+      "logo": "https://suportelojaonline.com.br/images/favicon-32x32.png",
+      "email": "contato@suportelojaonline.com.br",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+55-31-98606-7064",
+        "availableLanguage": "Portuguese"
+      },
+      "areaServed": "BR",
+      "description": "Suporte técnico especializado e inteligência artificial para e-commerces, softwares e sites que não podem parar de vender."
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Gerador de Botão Flutuante",
+      "url": "https://suportelojaonline.com.br/gerador-botao-flutuante.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "provider": {
+        "@id": "https://suportelojaonline.com.br/#org"
+      },
+      "description": "Crie grátis um botão flutuante de WhatsApp, Instagram, telefone ou link para o seu site. Personalize cor, ícone e posição e copie o código pronto — sem plugin.",
+      "inLanguage": "pt-BR"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
@@ -428,6 +485,7 @@
       <a href="index.html" class="wordmark">SLO<span class="wordmark-sub">suportelojaonline</span></a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#precos">Preços</a>
         <a href="ferramentas.html">Ferramentas</a>
         <a href="artigos.html">Artigos</a>
         <a href="index.html#como-funciona">Como Funciona</a>
@@ -574,12 +632,15 @@
             <summary>Funciona em WordPress, Shopify e Nuvemshop?<span
                 class="material-symbols-outlined">expand_more</span></summary>
             <div class="faq-answer">Sim, funciona em qualquer plataforma que permita inserir HTML no tema. No nosso
-              <a href="artigo-botao-whatsapp-site.html">guia do botão flutuante</a> mostramos onde colar o código em cada
-              plataforma.</div>
+              <a href="artigo-botao-whatsapp-site.html">guia do botão flutuante</a> mostramos onde colar o código em
+              cada
+              plataforma.
+            </div>
           </details>
 
           <details name="fab-faq">
-            <summary>Posso usar sem ser para WhatsApp?<span class="material-symbols-outlined">expand_more</span></summary>
+            <summary>Posso usar sem ser para WhatsApp?<span class="material-symbols-outlined">expand_more</span>
+            </summary>
             <div class="faq-answer">Pode. Além de WhatsApp, o botão aceita Instagram, Facebook, Telegram, telefone,
               e-mail e qualquer link — como uma página de promoção, catálogo ou agendamento. Escolha o ícone e a cor que
               combinam com sua marca.</div>
@@ -662,7 +723,11 @@
           case 'telegram': return c.v1 ? 'https://t.me/' + c.v1.replace(/^@/, '').trim() : '';
           case 'phone': return digits ? 'tel:+' + digits : '';
           case 'email': return c.v1 ? 'mailto:' + c.v1.trim() : '';
-          case 'url': return (c.v1 || '').trim();
+          case 'url': {
+            const u = (c.v1 || '').trim();
+            if (!u) return '';
+            return /^[a-z][a-z0-9+.-]*:/i.test(u) ? u : 'https://' + u;
+          }
         }
         return '';
       }
@@ -681,7 +746,7 @@
           case 'url': {
             let opts = '';
             for (const k in GENERIC_ICONS) opts += '<option value="' + k + '"' + (c.icon === k ? ' selected' : '') + '>Ícone: ' + GENERIC_ICONS[k] + '</option>';
-            return '<input type="url" data-f="v1" placeholder="https://seusite.com.br/promocao" value="' + esc(c.v1) + '" />' +
+            return '<input type="text" data-f="v1" inputmode="url" placeholder="seusite.com.br/promocao" value="' + esc(c.v1) + '" />' +
               '<select data-f="icon">' + opts + '</select>';
           }
         }

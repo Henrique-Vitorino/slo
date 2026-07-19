@@ -152,6 +152,28 @@
     summaryEl.innerHTML =
       `${done.length} ${done.length === 1 ? 'imagem' : 'imagens'}: ` +
       `${fmtBytes(before)} → ${fmtBytes(after)} <strong>(−${pct}%)</strong>`;
+
+    // Contextual CTA with real savings
+    const cta = $('#opt-cta');
+    if (cta) {
+      const saved = before - after;
+      if (saved > 0) {
+        const desc = $('#opt-cta-desc');
+        if (desc) {
+          desc.textContent =
+            `Você acabou de economizar ${fmtBytes(saved)} em ${done.length} ${done.length === 1 ? 'imagem' : 'imagens'}. ` +
+            'A SLO otimiza todas as imagens da sua loja e cuida da performance de ponta a ponta.';
+        }
+        const btn = $('#opt-cta-btn');
+        if (btn) {
+          const msg = `Olá! Usei o Otimizador de Imagens da SLO e economizei ${fmtBytes(saved)}. Quero otimizar as imagens do meu site inteiro.`;
+          btn.href = 'https://wa.me/5531986067064?text=' + encodeURIComponent(msg);
+        }
+        cta.classList.remove('hidden');
+      } else {
+        cta.classList.add('hidden');
+      }
+    }
   }
 
   /* ===== Adding files ===== */

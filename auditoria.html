@@ -17,6 +17,23 @@
   <meta name="description"
     content="Analise as imagens de qualquer site e receba um relatório com nota, problemas encontrados e economia estimada. Grátis, sem cadastro." />
 
+  <link rel="canonical" href="https://suportelojaonline.com.br/auditoria.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SLO — Suporte Loja Online" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://suportelojaonline.com.br/auditoria.html" />
+  <meta property="og:title" content="Auditoria de Imagens — SLO" />
+  <meta property="og:description"
+    content="Analise as imagens de qualquer site e receba um relatório com nota, problemas encontrados e economia estimada. Grátis, sem cadastro." />
+  <meta property="og:image" content="https://suportelojaonline.com.br/images/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Auditoria de Imagens — SLO" />
+  <meta name="twitter:description"
+    content="Analise as imagens de qualquer site e receba um relatório com nota, problemas encontrados e economia estimada. Grátis, sem cadastro." />
+  <meta name="twitter:image" content="https://suportelojaonline.com.br/images/og-cover.png" />
+
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
@@ -25,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
   <link rel="stylesheet" href="styles.css?v=20260719" />
 
   <style>
@@ -492,6 +509,46 @@
       display: none !important;
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://suportelojaonline.com.br/#org",
+      "name": "SLO — Suporte Loja Online",
+      "url": "https://suportelojaonline.com.br/",
+      "logo": "https://suportelojaonline.com.br/images/favicon-32x32.png",
+      "email": "contato@suportelojaonline.com.br",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+55-31-98606-7064",
+        "availableLanguage": "Portuguese"
+      },
+      "areaServed": "BR",
+      "description": "Suporte técnico especializado e inteligência artificial para e-commerces, softwares e sites que não podem parar de vender."
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Auditoria de Imagens",
+      "url": "https://suportelojaonline.com.br/auditoria.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "provider": {
+        "@id": "https://suportelojaonline.com.br/#org"
+      },
+      "description": "Analise as imagens de qualquer site e receba um relatório com nota, problemas encontrados e economia estimada. Grátis, sem cadastro.",
+      "inLanguage": "pt-BR"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
@@ -501,6 +558,7 @@
       <a href="index.html" class="wordmark">SLO<span class="wordmark-sub">suportelojaonline</span></a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#precos">Preços</a>
         <a href="ferramentas.html">Ferramentas</a>
         <a href="artigos.html">Artigos</a>
         <a href="index.html#como-funciona">Como Funciona</a>
@@ -528,7 +586,7 @@
     <section class="container audit-wrap">
 
       <form class="audit-form" id="audit-form">
-        <input type="url" id="url-input" placeholder="https://seusite.com.br" required autocomplete="url"
+        <input type="text" id="url-input" placeholder="seusite.com.br" required autocomplete="url"
           inputmode="url" />
         <button type="submit" class="btn-audit" id="audit-btn">
           <span class="material-symbols-outlined">search_insights</span>
@@ -575,6 +633,19 @@
         <div class="img-list">
           <h3>Todas as imagens (<span id="img-count">0</span>)</h3>
           <div id="img-rows"></div>
+        </div>
+
+        <div class="report-cta" id="report-cta">
+          <div class="report-cta-copy">
+            <h3 id="report-cta-title">Quer que a gente corrija isso para você?</h3>
+            <p id="report-cta-desc">Nosso time otimiza todas as imagens do seu site e cuida da performance de ponta a
+              ponta.</p>
+          </div>
+          <a class="btn btn-whatsapp" id="report-cta-btn" href="https://wa.me/5531986067064" target="_blank"
+            rel="noopener">
+            <span class="material-symbols-outlined">chat</span>
+            Falar com a SLO
+          </a>
         </div>
       </div>
 

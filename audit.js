@@ -119,6 +119,27 @@
       })
       .join('');
 
+    // Contextual CTA based on the result
+    const ctaTitle = document.getElementById('report-cta-title');
+    const ctaDesc = document.getElementById('report-cta-desc');
+    const ctaBtn = document.getElementById('report-cta-btn');
+    if (ctaTitle && ctaDesc && ctaBtn) {
+      const savings = s.estimatedSavingsMb ?? 0;
+      if (score >= 90) {
+        ctaTitle.textContent = 'Imagens em dia. E o resto do seu site?';
+        ctaDesc.textContent =
+          'Performance vai muito além das imagens: código, cache, hospedagem e checkout. Faça um diagnóstico completo com a SLO.';
+      } else {
+        ctaTitle.textContent = `Sua nota foi ${score}/100 — quer que a gente corrija isso?`;
+        ctaDesc.textContent =
+          savings > 0
+            ? `Dá para economizar cerca de ${savings.toLocaleString('pt-BR')} MB só nas imagens. Nosso time otimiza tudo e cuida da performance de ponta a ponta.`
+            : 'Nosso time otimiza as imagens do seu site e cuida da performance de ponta a ponta.';
+      }
+      const msg = `Olá! Fiz a auditoria de imagens do site ${siteUrl} e a nota foi ${score}/100. Quero ajuda da SLO para melhorar a performance.`;
+      ctaBtn.href = 'https://wa.me/5531986067064?text=' + encodeURIComponent(msg);
+    }
+
     show(report);
     report.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }

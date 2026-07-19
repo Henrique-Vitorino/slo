@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suportelojaonline.com.br/sitemap.xml
