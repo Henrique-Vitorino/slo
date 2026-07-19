@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferramentas Gratuitas — SLO</title>
+  <meta name="description"
+    content="Ferramentas gratuitas da SLO para o seu dia a dia digital. Rodam direto no navegador, sem enviar seus arquivos para nenhum servidor." />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark">SLO</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html#servicos">Serviços</a>
+        <a href="ferramentas.html">Ferramentas</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-whatsapp header-cta"
+        href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20SLO%20sobre%20suporte%20t%C3%A9cnico."
+        target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="tools-hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>Grátis, sem cadastro</span>
+        <h1>Ferramentas Gratuitas</h1>
+        <p class="lead">Pequenos utilitários que resolvem problemas do dia a dia, direto no seu navegador. Sem
+          cadastro, sem enviar arquivos para servidores.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="tools-grid">
+        <a class="tool-card" href="otimizador.html">
+          <span class="chip chip-lg chip-cyan"><span class="material-symbols-outlined">add_photo_alternate</span></span>
+          <h3>Otimizador de Imagens</h3>
+          <p>Comprima e redimensione imagens direto no navegador — PNG, JPEG, WebP, AVIF e GIF. Nada é enviado para
+            servidores.</p>
+          <span class="tool-cta">Abrir ferramenta <span class="material-symbols-outlined">arrow_forward</span></span>
+        </a>
+
+        <a class="tool-card" href="auditoria.html">
+          <span class="chip chip-lg chip-cyan"><span class="material-symbols-outlined">search_insights</span></span>
+          <h3>Auditoria de Imagens</h3>
+          <p>Informe a URL de um site e receba um relatório completo: nota de otimização, imagens com problemas e
+            economia estimada.</p>
+          <span class="tool-cta">Abrir ferramenta <span class="material-symbols-outlined">arrow_forward</span></span>
+        </a>
+
+        <div class="tool-card soon">
+          <span class="chip chip-lg chip-cyan"><span class="material-symbols-outlined">auto_awesome</span></span>
+          <h3>Em breve</h3>
+          <p>Tem sugestão de ferramenta? Fale com a gente no WhatsApp.</p>
+          <span class="tool-cta">Em desenvolvimento</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="wordmark">SLO</span>
+        <p>Suporte especializado para empresas que não aceitam parar no tempo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="ferramentas.html">Ferramentas</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5531986067064" target="_blank" rel="noopener"><span
+            class="material-symbols-outlined">chat</span>WhatsApp</a>
+        <a href="mailto:henriquevitorino19@gmail.com"><span
+            class="material-symbols-outlined">mail</span>henriquevitorino19@gmail.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Suporte Loja Online (SLO). Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a class="fab-whatsapp" href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20SLO."
+    target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <span class="material-symbols-outlined">chat</span>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
