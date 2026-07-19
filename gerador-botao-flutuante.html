@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5KG62FQ4Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q5KG62FQ4Z');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Botão Flutuante de WhatsApp e Multi-canal para Site — SLO</title>
+  <meta name="description"
+    content="Crie grátis um botão flutuante de WhatsApp, Instagram, telefone ou link para o seu site. Personalize cor, ícone e posição e copie o código pronto — sem plugin." />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css?v=20260719" />
+
+  <style>
+    /* ===== Floating button generator page ===== */
+    .opt-hero {
+      padding: clamp(40px, 6vw, 72px) 0 32px;
+      text-align: center;
+    }
+
+    .opt-hero h1 {
+      font-size: clamp(30px, 4.5vw, 48px);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin: 0 0 16px;
+    }
+
+    .opt-hero .lead {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .fab-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding-bottom: var(--sy);
+    }
+
+    .fab-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .fab-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fab-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .fab-panel+.fab-panel {
+      margin-top: 24px;
+    }
+
+    .fab-panel-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    .ctrl {
+      margin-bottom: 16px;
+    }
+
+    .ctrl:last-child {
+      margin-bottom: 0;
+    }
+
+    .ctrl label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .ctrl input[type="text"],
+    .ctrl input[type="tel"],
+    .ctrl input[type="email"],
+    .ctrl input[type="url"],
+    .ctrl input[type="number"],
+    .ctrl select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid var(--line);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: var(--font);
+      color: var(--text);
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .ctrl input:focus,
+    .ctrl select:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+
+    .ctrl input[type="color"] {
+      width: 100%;
+      height: 38px;
+      padding: 3px;
+      border: 1.5px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .ctrl-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .ctrl-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* bottom-align inputs so wrapping labels don't misalign the row */
+    .ctrl-row>div,
+    .ctrl-row-3>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .toggle-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .toggle-line input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+    }
+
+    /* Channel rows */
+    .channel {
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      background: #fafbf9;
+    }
+
+    .channel-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .channel-head select {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1.5px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: var(--font);
+      background: #fff;
+    }
+
+    .channel-remove {
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--muted);
+      display: flex;
+      padding: 4px;
+      border-radius: 6px;
+    }
+
+    .channel-remove:hover {
+      color: #dc2626;
+      background: rgba(220, 38, 38, .08);
+    }
+
+    .channel-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .channel-fields input,
+    .channel-fields select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1.5px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: var(--font);
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .channel-color-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .channel-color-line input[type="color"] {
+      width: 36px;
+      height: 30px;
+      padding: 2px;
+      border: 1.5px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .btn-add-channel {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font);
+      border: 1.5px dashed var(--line);
+      background: none;
+      color: var(--accent-dark);
+      cursor: pointer;
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .btn-add-channel:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .btn-add-channel .material-symbols-outlined {
+      font-size: 18px;
+    }
+
+    /* Preview */
+    .fab-preview-sticky {
+      position: sticky;
+      top: 90px;
+    }
+
+    .fab-preview {
+      position: relative;
+      height: 380px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .fab-preview .slo-fab {
+      position: absolute !important;
+    }
+
+    .fake-bar {
+      height: 34px;
+      background: #f1f3ef;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fake-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d7dcd6;
+    }
+
+    .fake-line {
+      height: 12px;
+      border-radius: 6px;
+      background: #eef1ee;
+      margin: 14px 20px 0;
+    }
+
+    .fake-line.w60 {
+      width: 60%;
+    }
+
+    .fake-line.w80 {
+      width: 80%;
+    }
+
+    .fake-line.w40 {
+      width: 40%;
+    }
+
+    .fake-block {
+      height: 90px;
+      border-radius: 10px;
+      background: #f4f6f3;
+      margin: 16px 20px 0;
+    }
+
+    .preview-hint {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      margin: 10px 0 0;
+    }
+
+    /* Code output */
+    .code-box {
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .code-box pre {
+      background: #0b1220;
+      color: #d7e2f4;
+      border-radius: 14px;
+      padding: 18px;
+      font-size: 12.5px;
+      line-height: 1.55;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      overflow: auto;
+      max-height: 320px;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .btn-copy-code {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font);
+      border: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      transition: background .2s ease;
+    }
+
+    .btn-copy-code:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-copy-code .material-symbols-outlined {
+      font-size: 16px;
+    }
+
+    .code-help {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 10px 0 0;
+    }
+
+    .privacy-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .privacy-note .material-symbols-outlined {
+      font-size: 16px;
+      color: var(--wa);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark">SLO<span class="wordmark-sub">suportelojaonline</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html#servicos">Serviços</a>
+        <a href="ferramentas.html">Ferramentas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-whatsapp header-cta"
+        href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20SLO%20sobre%20suporte%20t%C3%A9cnico."
+        target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="opt-hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>Ferramenta gratuita</span>
+        <h1>Gerador de Botão Flutuante</h1>
+        <p class="lead">Crie um botão flutuante de WhatsApp — ou um menu com vários canais — para o seu site.
+          Personalize cor, ícone e posição e copie o código pronto. Sem plugin, sem cadastro.</p>
+      </div>
+    </section>
+
+    <section class="container fab-wrap">
+      <div class="fab-grid">
+
+        <div>
+          <div class="fab-panel">
+            <p class="fab-panel-title">1 · Canais do botão</p>
+            <div id="channels"></div>
+            <button type="button" class="btn-add-channel" id="add-channel">
+              <span class="material-symbols-outlined">add</span>
+              Adicionar canal
+            </button>
+            <p class="code-help">Com 1 canal, o botão abre direto. Com vários, ele expande um menu.</p>
+          </div>
+
+          <div class="fab-panel">
+            <p class="fab-panel-title">2 · Aparência</p>
+            <div class="ctrl ctrl-row-3">
+              <div>
+                <label for="fab-color">Cor do botão</label>
+                <input type="color" id="fab-color" value="#22C55E" />
+              </div>
+              <div>
+                <label for="fab-icon-color">Cor do ícone e texto</label>
+                <input type="color" id="fab-icon-color" value="#FFFFFF" />
+              </div>
+              <div>
+                <label for="fab-size">Tamanho</label>
+                <select id="fab-size">
+                  <option value="52">Pequeno</option>
+                  <option value="60" selected>Médio</option>
+                  <option value="68">Grande</option>
+                </select>
+              </div>
+            </div>
+            <div class="ctrl">
+              <label for="fab-label">Texto ao lado do ícone (opcional)</label>
+              <input type="text" id="fab-label" placeholder="Ex.: Fale conosco" maxlength="30" />
+            </div>
+            <div class="ctrl ctrl-row-3">
+              <div>
+                <label for="fab-pos">Posição</label>
+                <select id="fab-pos">
+                  <option value="right" selected>Direita</option>
+                  <option value="left">Esquerda</option>
+                </select>
+              </div>
+              <div>
+                <label for="fab-x">Dist. lateral (px)</label>
+                <input type="number" id="fab-x" value="20" min="0" max="120" />
+              </div>
+              <div>
+                <label for="fab-y">Dist. inferior (px)</label>
+                <input type="number" id="fab-y" value="20" min="0" max="120" />
+              </div>
+            </div>
+            <div class="ctrl">
+              <div class="toggle-line">
+                <span>Animação de pulso (chama atenção)</span>
+                <input type="checkbox" id="fab-pulse" checked />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fab-preview-sticky">
+          <div class="fab-panel">
+            <p class="fab-panel-title">3 · Preview — clique no botão para testar</p>
+            <div class="fab-preview" id="preview">
+              <div class="fake-bar"><span class="fake-dot"></span><span class="fake-dot"></span><span
+                  class="fake-dot"></span></div>
+              <div class="fake-line w60"></div>
+              <div class="fake-block"></div>
+              <div class="fake-line w80"></div>
+              <div class="fake-line w40"></div>
+              <div id="preview-fab"></div>
+            </div>
+            <p class="preview-hint">Simulação de uma página do seu site.</p>
+          </div>
+
+          <div class="fab-panel">
+            <p class="fab-panel-title">4 · Copie o código</p>
+            <div class="code-box">
+              <pre><code id="code-out"></code></pre>
+              <button type="button" class="btn-copy-code" id="copy-code">
+                <span class="material-symbols-outlined">content_copy</span>
+                <span id="copy-code-label">Copiar código</span>
+              </button>
+            </div>
+            <p class="code-help">Cole antes do fechamento da tag <strong>&lt;/body&gt;</strong> do seu site. Funciona em
+              WordPress, Shopify, Nuvemshop e qualquer plataforma que aceite HTML. Veja o
+              <a href="artigo-botao-whatsapp-site.html">passo a passo por plataforma</a>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="privacy-note">
+        <span class="material-symbols-outlined">lock</span>
+        Tudo é gerado no seu navegador — o código é seu, sem dependências externas e sem rastreio.
+      </p>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq">
+      <div class="container faq-inner">
+        <div class="section-head">
+          <h2>Perguntas Frequentes</h2>
+          <p>Tire suas dúvidas sobre o botão flutuante.</p>
+        </div>
+
+        <div class="faq-list">
+          <details name="fab-faq">
+            <summary>Preciso instalar algum plugin?<span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Não. O código gerado é HTML e CSS puros, sem bibliotecas nem scripts externos. É só
+              colar antes do <strong>&lt;/body&gt;</strong> do seu site — menos peso e menos risco que um plugin.</div>
+          </details>
+
+          <details name="fab-faq">
+            <summary>Funciona em WordPress, Shopify e Nuvemshop?<span
+                class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Sim, funciona em qualquer plataforma que permita inserir HTML no tema. No nosso
+              <a href="artigo-botao-whatsapp-site.html">guia do botão flutuante</a> mostramos onde colar o código em cada
+              plataforma.</div>
+          </details>
+
+          <details name="fab-faq">
+            <summary>Posso usar sem ser para WhatsApp?<span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Pode. Além de WhatsApp, o botão aceita Instagram, Facebook, Telegram, telefone,
+              e-mail e qualquer link — como uma página de promoção, catálogo ou agendamento. Escolha o ícone e a cor que
+              combinam com sua marca.</div>
+          </details>
+
+          <details name="fab-faq">
+            <summary>O botão deixa meu site lento?<span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Não. O código tem poucos KB, não carrega nada de servidores externos e usa apenas
+              CSS para as animações. É uma das formas mais leves de adicionar um botão de contato.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 SLO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ===== Icon set (inline SVG paths, 24x24, fill currentColor) =====
+      const ICONS = {
+        whatsapp: 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z',
+        instagram: 'M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z',
+        facebook: 'M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z',
+        telegram: 'M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z',
+        phone: 'M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z',
+        mail: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z',
+        chat: 'M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z',
+        link: 'M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z',
+        cart: 'M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.47 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z',
+        help: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z',
+        location: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
+        close: 'M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'
+      };
+
+      // ===== Channel types =====
+      const TYPES = {
+        whatsapp: { name: 'WhatsApp', icon: 'whatsapp', color: '#22C55E', label: 'WhatsApp' },
+        instagram: { name: 'Instagram', icon: 'instagram', color: '#E1306C', label: 'Instagram' },
+        facebook: { name: 'Facebook', icon: 'facebook', color: '#1877F2', label: 'Facebook' },
+        telegram: { name: 'Telegram', icon: 'telegram', color: '#229ED9', label: 'Telegram' },
+        phone: { name: 'Telefone', icon: 'phone', color: '#0284C7', label: 'Ligar agora' },
+        email: { name: 'E-mail', icon: 'mail', color: '#EA580C', label: 'E-mail' },
+        url: { name: 'Link personalizado', icon: 'link', color: '#3ABEF9', label: 'Saiba mais' }
+      };
+
+      const GENERIC_ICONS = { link: 'Seta / link', chat: 'Balão de chat', cart: 'Carrinho', help: 'Ajuda', location: 'Localização' };
+
+      let channels = [
+        { type: 'whatsapp', v1: '', v2: '', label: 'WhatsApp', color: '#22C55E', icon: 'whatsapp' }
+      ];
+      let uid = 1;
+
+      const channelsEl = document.getElementById('channels');
+      const previewFab = document.getElementById('preview-fab');
+      const codeOut = document.getElementById('code-out');
+
+      function svg(name, size) {
+        return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '" fill="currentColor" aria-hidden="true"><path d="' + ICONS[name] + '"/></svg>';
+      }
+
+      function esc(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function channelHref(c) {
+        const digits = (c.v1 || '').replace(/\D/g, '');
+        switch (c.type) {
+          case 'whatsapp': {
+            if (!digits) return '';
+            const msg = (c.v2 || '').trim();
+            return 'https://wa.me/' + digits + (msg ? '?text=' + encodeURIComponent(msg) : '');
+          }
+          case 'instagram': return c.v1 ? 'https://instagram.com/' + c.v1.replace(/^@/, '').trim() : '';
+          case 'facebook': return c.v1 ? (c.v1.startsWith('http') ? c.v1.trim() : 'https://facebook.com/' + c.v1.replace(/^@/, '').trim()) : '';
+          case 'telegram': return c.v1 ? 'https://t.me/' + c.v1.replace(/^@/, '').trim() : '';
+          case 'phone': return digits ? 'tel:+' + digits : '';
+          case 'email': return c.v1 ? 'mailto:' + c.v1.trim() : '';
+          case 'url': return (c.v1 || '').trim();
+        }
+        return '';
+      }
+
+      // ===== Channels UI =====
+      function fieldsHTML(c) {
+        switch (c.type) {
+          case 'whatsapp':
+            return '<input type="tel" data-f="v1" placeholder="Número com DDI — ex.: 5531986067064" value="' + esc(c.v1) + '" />' +
+              '<input type="text" data-f="v2" placeholder="Mensagem pré-preenchida (opcional)" value="' + esc(c.v2) + '" />';
+          case 'instagram': return '<input type="text" data-f="v1" placeholder="@seuusuario" value="' + esc(c.v1) + '" />';
+          case 'facebook': return '<input type="text" data-f="v1" placeholder="suapagina ou URL completa" value="' + esc(c.v1) + '" />';
+          case 'telegram': return '<input type="text" data-f="v1" placeholder="@seuusuario" value="' + esc(c.v1) + '" />';
+          case 'phone': return '<input type="tel" data-f="v1" placeholder="Número com DDI — ex.: 5531986067064" value="' + esc(c.v1) + '" />';
+          case 'email': return '<input type="email" data-f="v1" placeholder="contato@suaempresa.com.br" value="' + esc(c.v1) + '" />';
+          case 'url': {
+            let opts = '';
+            for (const k in GENERIC_ICONS) opts += '<option value="' + k + '"' + (c.icon === k ? ' selected' : '') + '>Ícone: ' + GENERIC_ICONS[k] + '</option>';
+            return '<input type="url" data-f="v1" placeholder="https://seusite.com.br/promocao" value="' + esc(c.v1) + '" />' +
+              '<select data-f="icon">' + opts + '</select>';
+          }
+        }
+        return '';
+      }
+
+      function renderChannels() {
+        channelsEl.innerHTML = '';
+        channels.forEach(function (c, i) {
+          const div = document.createElement('div');
+          div.className = 'channel';
+          let typeOpts = '';
+          for (const k in TYPES) typeOpts += '<option value="' + k + '"' + (c.type === k ? ' selected' : '') + '>' + TYPES[k].name + '</option>';
+          div.innerHTML =
+            '<div class="channel-head">' +
+            '<select data-f="type">' + typeOpts + '</select>' +
+            (channels.length > 1 ? '<button type="button" class="channel-remove" title="Remover canal"><span class="material-symbols-outlined">delete</span></button>' : '') +
+            '</div>' +
+            '<div class="channel-fields">' +
+            fieldsHTML(c) +
+            (channels.length > 1
+              ? '<input type="text" data-f="label" placeholder="Rótulo no menu — ex.: ' + TYPES[c.type].label + '" value="' + esc(c.label) + '" maxlength="30" />' +
+              '<div class="channel-color-line"><input type="color" data-f="color" value="' + c.color + '" /> Cor deste canal no menu</div>'
+              : '') +
+            '</div>';
+
+          div.addEventListener('input', function (e) {
+            const f = e.target.dataset.f;
+            if (!f) return;
+            if (f === 'type') {
+              const t = TYPES[e.target.value];
+              channels[i] = { type: e.target.value, v1: '', v2: '', label: t.label, color: t.color, icon: t.icon };
+              // single channel: suggest the type's default color for the main button
+              if (channels.length === 1) document.getElementById('fab-color').value = t.color;
+              renderChannels();
+            } else {
+              channels[i][f] = e.target.value;
+            }
+            update();
+          });
+          const rm = div.querySelector('.channel-remove');
+          if (rm) rm.addEventListener('click', function () {
+            channels.splice(i, 1);
+            renderChannels();
+            update();
+          });
+          channelsEl.appendChild(div);
+        });
+      }
+
+      document.getElementById('add-channel').addEventListener('click', function () {
+        if (channels.length >= 5) return;
+        // suggest a type not yet used
+        const used = channels.map(function (c) { return c.type; });
+        const next = Object.keys(TYPES).find(function (k) { return used.indexOf(k) === -1; }) || 'url';
+        const t = TYPES[next];
+        channels.push({ type: next, v1: '', v2: '', label: t.label, color: t.color, icon: t.icon });
+        renderChannels();
+        update();
+      });
+
+      // ===== Snippet generation =====
+      function hexToRgb(hex) {
+        const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return m ? parseInt(m[1], 16) + ',' + parseInt(m[2], 16) + ',' + parseInt(m[3], 16) : '34,197,94';
+      }
+
+      function getCfg() {
+        return {
+          color: document.getElementById('fab-color').value,
+          iconColor: document.getElementById('fab-icon-color').value,
+          size: parseInt(document.getElementById('fab-size').value, 10),
+          label: document.getElementById('fab-label').value.trim(),
+          pos: document.getElementById('fab-pos').value,
+          x: parseInt(document.getElementById('fab-x').value, 10) || 0,
+          y: parseInt(document.getElementById('fab-y').value, 10) || 0,
+          pulse: document.getElementById('fab-pulse').checked
+        };
+      }
+
+      function activeChannels() {
+        return channels.filter(function (c) { return channelHref(c); });
+      }
+
+      function genSnippet(cfg, chs) {
+        const side = cfg.pos === 'left' ? 'left' : 'right';
+        const align = side === 'right' ? 'flex-end' : 'flex-start';
+        const iconSize = Math.round(cfg.size * 0.47);
+        const single = chs.length === 1;
+        const mainColor = cfg.color;
+
+        let css = '.slo-fab{position:fixed;bottom:' + cfg.y + 'px;' + side + ':' + cfg.x + 'px;z-index:99999;display:flex;flex-direction:column;align-items:' + align + ';gap:12px;font-family:system-ui,-apple-system,sans-serif}';
+        if (!single) {
+          css += '.slo-fab-menu{display:flex;flex-direction:column;align-items:' + align + ';gap:10px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s}';
+          css += '.slo-fab.slo-open .slo-fab-menu{opacity:1;visibility:visible;transform:none}';
+          css += '.slo-fab-item{display:flex;align-items:center;gap:10px;text-decoration:none;flex-direction:' + (side === 'right' ? 'row' : 'row-reverse') + '}';
+          css += '.slo-fab-item-label{background:#fff;color:#1a1a1a;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);white-space:nowrap}';
+          css += '.slo-fab-item-btn{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22);flex-shrink:0}';
+          css += '.slo-fab-i{display:flex}.slo-fab-x{display:none}.slo-fab.slo-open .slo-fab-i{display:none}.slo-fab.slo-open .slo-fab-x{display:flex}';
+        }
+        css += '.slo-fab-main{height:' + cfg.size + 'px;' + (cfg.label ? 'padding:0 22px;border-radius:999px;gap:10px;' : 'width:' + cfg.size + 'px;border-radius:50%;') + 'border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:' + cfg.iconColor + ';background:' + mainColor + ';box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none;font-family:inherit;transition:transform .2s ease' + (cfg.pulse ? ';animation:slo-pulse 2.2s infinite' : '') + '}';
+        css += '.slo-fab-main:hover{transform:scale(1.05)}';
+        if (cfg.label) css += '.slo-fab-main-txt{font-size:15px;font-weight:700;white-space:nowrap}';
+        if (cfg.pulse) css += '@keyframes slo-pulse{0%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 0 rgba(' + hexToRgb(mainColor) + ',.45)}70%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 16px rgba(' + hexToRgb(mainColor) + ',0)}100%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 0 rgba(' + hexToRgb(mainColor) + ',0)}}';
+
+        let html = '<!-- Botão flutuante gerado gratuitamente em suportelojaonline.com.br/gerador-botao-flutuante.html -->\n';
+        html += '<div class="slo-fab">\n<style>' + css + '</style>\n';
+
+        if (single) {
+          const c = chs[0];
+          html += '<a class="slo-fab-main" href="' + esc(channelHref(c)) + '"' + (c.type === 'phone' || c.type === 'email' ? '' : ' target="_blank" rel="noopener"') + ' aria-label="' + esc(c.label || TYPES[c.type].name) + '">' + svg(c.icon, iconSize) + (cfg.label ? '<span class="slo-fab-main-txt">' + esc(cfg.label) + '</span>' : '') + '</a>\n';
+        } else {
+          html += '<div class="slo-fab-menu">\n';
+          chs.forEach(function (c) {
+            html += '<a class="slo-fab-item" href="' + esc(channelHref(c)) + '"' + (c.type === 'phone' || c.type === 'email' ? '' : ' target="_blank" rel="noopener"') + '>' +
+              (c.label ? '<span class="slo-fab-item-label">' + esc(c.label) + '</span>' : '') +
+              '<span class="slo-fab-item-btn" style="background:' + c.color + '">' + svg(c.icon, 22) + '</span></a>\n';
+          });
+          html += '</div>\n';
+          html += '<button type="button" class="slo-fab-main" aria-label="Abrir menu de contato" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle(\'slo-open\');this.setAttribute(\'aria-expanded\',p.classList.contains(\'slo-open\'))">' +
+            '<span class="slo-fab-i">' + svg('chat', iconSize) + '</span>' +
+            '<span class="slo-fab-x">' + svg('close', iconSize) + '</span>' +
+            (cfg.label ? '<span class="slo-fab-main-txt">' + esc(cfg.label) + '</span>' : '') +
+            '</button>\n';
+        }
+        html += '</div>';
+        return html;
+      }
+
+      // ===== Live update =====
+      function update() {
+        const cfg = getCfg();
+        const chs = activeChannels();
+        if (!chs.length) {
+          previewFab.innerHTML = '';
+          codeOut.textContent = 'Preencha ao menos um canal para gerar o código.';
+          return;
+        }
+        const snippet = genSnippet(cfg, chs);
+        previewFab.innerHTML = snippet;
+        codeOut.textContent = snippet;
+      }
+
+      // block navigation inside preview (keep toggle working)
+      previewFab.addEventListener('click', function (e) {
+        const a = e.target.closest('a');
+        if (a) e.preventDefault();
+      });
+
+      ['fab-color', 'fab-icon-color', 'fab-size', 'fab-label', 'fab-pos', 'fab-x', 'fab-y', 'fab-pulse'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', update);
+      });
+
+      document.getElementById('copy-code').addEventListener('click', function () {
+        const chs = activeChannels();
+        if (!chs.length) return;
+        navigator.clipboard.writeText(genSnippet(getCfg(), chs)).then(function () {
+          const l = document.getElementById('copy-code-label');
+          l.textContent = 'Copiado!';
+          setTimeout(function () { l.textContent = 'Copiar código'; }, 1600);
+        });
+      });
+
+      renderChannels();
+      update();
+    })();
+  </script>
+  <script src="menu.js?v=20260719" defer></script>
+</body>
+
+</html>
