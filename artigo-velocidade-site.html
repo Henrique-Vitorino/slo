@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como aumentar a velocidade do seu site ou e-commerce — SLO</title>
+  <meta name="description"
+    content="Passos práticos para deixar seu site ou e-commerce mais rápido: otimização de imagens, cache, hospedagem e Core Web Vitals. Com ferramentas gratuitas da SLO." />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark">SLO<span class="wordmark-sub">suportelojaonline</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html#servicos">Serviços</a>
+        <a href="ferramentas.html">Ferramentas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-whatsapp header-cta"
+        href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20SLO%20sobre%20suporte%20t%C3%A9cnico."
+        target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-wrap">
+      <a class="article-back" href="artigos.html">
+        <span class="material-symbols-outlined">arrow_back</span>Voltar para os artigos
+      </a>
+
+      <header class="article-header">
+        <span class="article-tag"><span class="material-symbols-outlined">speed</span>Performance</span>
+        <h1>Como aumentar a velocidade do seu site ou e-commerce</h1>
+        <p class="article-meta">18 de julho de 2026 · 5 min de leitura</p>
+      </header>
+
+      <div class="article-body">
+        <p class="article-lead">Cada segundo conta. Sites que demoram mais de 3 segundos para carregar perdem mais da
+          metade dos visitantes antes mesmo de mostrar o produto. No e-commerce, velocidade é venda — e a boa notícia é
+          que dá para melhorar bastante sem reconstruir tudo.</p>
+
+        <p>Neste guia direto, você vai ver os pontos que mais impactam a velocidade de um site e por onde começar hoje
+          mesmo. E o primeiro deles quase sempre é o mesmo: <strong>as imagens</strong>.</p>
+
+        <h2>1. Otimize as imagens (o maior vilão)</h2>
+        <p>Em lojas online, as imagens costumam representar mais da metade do peso de uma página. Uma única foto de
+          produto exportada direto do celular pode ter 4, 5 ou 8 MB — quando o ideal seria algo em torno de 100 a 300 KB.
+          Multiplique isso por dezenas de produtos e você tem um site travado.</p>
+        <p>O que fazer na prática:</p>
+        <ul>
+          <li><strong>Comprima</strong> cada imagem antes de subir para o site.</li>
+          <li><strong>Redimensione</strong> para o tamanho real de exibição — não use uma imagem de 4000px onde ela
+            aparece com 600px.</li>
+          <li>Use formatos modernos como <strong>WebP</strong> ou <strong>AVIF</strong>, que pesam bem menos que JPEG e
+            PNG mantendo a qualidade.</li>
+          <li>Ative o <strong>lazy loading</strong> para carregar imagens só quando o cliente rola até elas.</li>
+        </ul>
+
+        <div class="tool-callout">
+          <span class="chip chip-cyan"><span class="material-symbols-outlined">add_photo_alternate</span></span>
+          <div class="tool-callout-body">
+            <h3>Otimizador de Imagens (grátis)</h3>
+            <p>Comprima e redimensione suas imagens direto no navegador — PNG, JPEG, WebP, AVIF e GIF. Nada é enviado
+              para servidores.</p>
+            <a class="btn btn-light" href="otimizador.html">Abrir otimizador</a>
+          </div>
+        </div>
+
+        <div class="tool-callout">
+          <span class="chip chip-cyan"><span class="material-symbols-outlined">search_insights</span></span>
+          <div class="tool-callout-body">
+            <h3>Auditoria de Imagens (grátis)</h3>
+            <p>Não sabe quais imagens estão pesando no seu site? Informe a URL e receba um relatório com nota de
+              otimização, imagens com problemas e a economia estimada.</p>
+            <a class="btn btn-light" href="auditoria.html">Auditar meu site</a>
+          </div>
+        </div>
+
+        <h2>2. Use cache para não recarregar tudo toda vez</h2>
+        <p>O cache guarda partes do seu site no navegador do visitante e em servidores intermediários, para que nas
+          próximas visitas o carregamento seja quase instantâneo. Ative o cache do navegador, use um plugin de cache
+          (no WordPress/WooCommerce) e considere um <strong>CDN</strong>, que entrega seus arquivos a partir do servidor
+          mais próximo de cada cliente.</p>
+
+        <h2>3. Escolha uma boa hospedagem</h2>
+        <p>Hospedagem barata demais cobra o preço em lentidão. Se sua loja cresceu, um plano compartilhado lotado pode ser
+          o gargalo. Servidores mais rápidos, com boa localização e recursos dedicados, fazem diferença real no tempo de
+          resposta — especialmente em horários de pico e promoções.</p>
+
+        <h2>4. Reduza scripts e plugins desnecessários</h2>
+        <p>Cada plugin, rastreador e script de terceiros adiciona peso. Faça uma limpeza: desative o que não usa, junte
+          arquivos quando possível e evite acumular ferramentas de análise que fazem a mesma coisa. Menos código
+          carregando significa página mais rápida.</p>
+
+        <h2>5. Acompanhe os Core Web Vitals</h2>
+        <p>O Google mede a experiência real do usuário com três métricas — carregamento (LCP), interatividade (INP) e
+          estabilidade visual (CLS). Elas influenciam tanto a conversão quanto o seu ranqueamento nas buscas. Ferramentas
+          como o PageSpeed Insights mostram onde melhorar, e boa parte dos ganhos vem justamente de imagens e cache.</p>
+
+        <h2>Por onde começar</h2>
+        <p>Se você fizer só uma coisa hoje, comece pelas imagens — é o ganho mais rápido e mais visível. Rode a
+          <a href="auditoria.html">Auditoria de Imagens</a> para descobrir o que está pesando, otimize os arquivos com o
+          <a href="otimizador.html">Otimizador de Imagens</a> e repita o processo. Depois avance para cache, hospedagem e
+          limpeza de scripts.</p>
+
+        <div class="article-cta">
+          <h3>Quer um site rápido sem dor de cabeça?</h3>
+          <p>A SLO cuida da performance da sua loja de ponta a ponta — imagens, cache, Core Web Vitals e muito mais.</p>
+          <a class="btn btn-whatsapp"
+            href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20deixar%20meu%20site%20mais%20r%C3%A1pido%20com%20a%20SLO."
+            target="_blank" rel="noopener">
+            <span class="material-symbols-outlined">chat</span>
+            Falar com um especialista
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="wordmark">SLO<span class="wordmark-sub">suportelojaonline</span></span>
+        <p>Suporte especializado para empresas que não aceitam parar no tempo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="ferramentas.html">Ferramentas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5531986067064" target="_blank" rel="noopener"><span
+            class="material-symbols-outlined">chat</span>WhatsApp</a>
+        <a href="mailto:henriquevitorino19@gmail.com"><span
+            class="material-symbols-outlined">mail</span>henriquevitorino19@gmail.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Suporte Loja Online (SLO). Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a class="fab-whatsapp" href="https://wa.me/5531986067064?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20SLO."
+    target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <span class="material-symbols-outlined">chat</span>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="menu.js" defer></script>
+</body>
+
+</html>
